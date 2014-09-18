@@ -9,6 +9,7 @@ import java.util.Set;
 import org.junit.Test;
 
 import com.sdc.vo.BaseVO;
+import com.sdc.vo.ExtendedBaseVO;
 
 public class BaseServiceTest {
 
@@ -31,8 +32,8 @@ public class BaseServiceTest {
 	@Test
 	public void testMountSetWithExtendedBaseVO() {
 		BaseService service = new BaseService();
-		List<ExtendedBaseVO> list = createTestListExtended();
-		Set<BaseVO> set = service.mountSetExtended(list);
+		List<BaseVO> list = createTestListExtended();
+		Set<BaseVO> set = service.mountSet(list);
 		assertEquals(7, set.size());
 	}
 	
@@ -98,16 +99,16 @@ public class BaseServiceTest {
 	}
 	
 	// ExtendedVO
-	private List<ExtendedBaseVO> createTestListExtended() {
-		List<ExtendedBaseVO> testList = new ArrayList<ExtendedBaseVO>();
+	private List<BaseVO> createTestListExtended() {
+		List<BaseVO> testList = new ArrayList<BaseVO>();
 		
-		ExtendedBaseVO base1 = new ExtendedBaseVO("One", 1, 1.0);
-		ExtendedBaseVO base2 = new ExtendedBaseVO("Two", 2, 2.0);
-		ExtendedBaseVO base3 = new ExtendedBaseVO("Three", 3, 3.0);
-		ExtendedBaseVO base4 = new ExtendedBaseVO("Four", 4, 4.0);
-		ExtendedBaseVO base5 = new ExtendedBaseVO("Five", 5, 5.0);
-		ExtendedBaseVO base6 = new ExtendedBaseVO("Six", 6, 6.0);
-		ExtendedBaseVO base7 = new ExtendedBaseVO("Seven", 7, 7.0);
+		BaseVO base1 = new ExtendedBaseVO("One", 1, 1.0);
+		BaseVO base2 = new ExtendedBaseVO("Two", 2, 2.0);
+		BaseVO base3 = new ExtendedBaseVO("Three", 3, 3.0);
+		BaseVO base4 = new ExtendedBaseVO("Four", 4, 4.0);
+		BaseVO base5 = new ExtendedBaseVO("Five", 5, 5.0);
+		BaseVO base6 = new ExtendedBaseVO("Six", 6, 6.0);
+		BaseVO base7 = new ExtendedBaseVO("Seven", 7, 7.0);
 		
 		testList.add(base1);
 		testList.add(base2);

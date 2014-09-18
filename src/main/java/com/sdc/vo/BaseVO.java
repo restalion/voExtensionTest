@@ -36,47 +36,4 @@ public class BaseVO {
 	public void setProperty3(Double property3) {
 		this.property3 = property3;
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result
-				+ ((property1 == null) ? 0 : property1.hashCode());
-		result = prime * result
-				+ ((property2 == null) ? 0 : property2.hashCode());
-		result = prime * result
-				+ ((property3 == null) ? 0 : property3.hashCode());
-		return result;
-	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		BaseVO other = (BaseVO) obj;
-//		if (property1 == null) {
-//			if (other.property1 != null)
-//				return false;
-//		} else if (!property1.equals(other.property1))
-//			return false;
-//		if (property2 == null) {
-//			if (other.property2 != null)
-//				return false;
-//		} else if (!property2.equals(other.property2))
-//			return false;
-//		if (property3 == null) {
-//			if (other.property3 != null)
-//				return false;
-//		} else if (!property3.equals(other.property3))
-//			return false;
-//		return true;
-//	}
-	
-	
-
 }
