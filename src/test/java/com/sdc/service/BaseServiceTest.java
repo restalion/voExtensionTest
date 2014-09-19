@@ -11,8 +11,15 @@ import org.junit.Test;
 import com.sdc.vo.BaseVO;
 import com.sdc.vo.ExtendedBaseVO;
 
+/**
+ * BaseServiceTest.
+ * @author restalion
+ */
 public class BaseServiceTest {
 
+	/**
+	 * testMountSetWithBaseVO, create a 7-size list and expect to return a 7-size set.
+	 */
 	@Test
 	public void testMountSetWithBaseVO() {
 		BaseService service = new BaseService();
@@ -21,6 +28,9 @@ public class BaseServiceTest {
 		assertEquals(7, set.size());
 	}
 	
+	/**
+	 * testMountSetWithBaseVODuplicated, create a 10-size list and expect to return a 10-size set.
+	 */
 	@Test
 	public void testMountSetWithBaseVODuplicated() {
 		BaseService service = new BaseService();
@@ -29,6 +39,9 @@ public class BaseServiceTest {
 		assertEquals(10, set.size());
 	}
 
+	/**
+	 * testMountSetWithExtendedBaseVO, create a 7-size list and expect to return a 7-size set.
+	 */
 	@Test
 	public void testMountSetWithExtendedBaseVO() {
 		BaseService service = new BaseService();
@@ -37,6 +50,9 @@ public class BaseServiceTest {
 		assertEquals(7, set.size());
 	}
 	
+	/**
+	 * testMountSetWithExtendedBaseVODuplicated, create a 10-size list and expect to return a 7-size set.
+	 */
 	@Test
 	public void testMountSetWithExtendedBaseVODuplicated() {
 		BaseService service = new BaseService();
@@ -48,6 +64,10 @@ public class BaseServiceTest {
 	///////////////////////////////////////////////////////////////////////////////////
 	
 	// BaseVO
+	/**
+	 * create a BaseVO testList.
+	 * @return
+	 */
 	private List<BaseVO> createTestList() {
 		List<BaseVO> testList = new ArrayList<BaseVO>();
 		
@@ -70,6 +90,10 @@ public class BaseServiceTest {
 		return testList;
 	}
 	
+	/**
+	 * Create a BaseVO test list with duplicated values.
+	 * @return
+	 */
 	private List<BaseVO> createTestListWithDuplicatedValues() {
 		List<BaseVO> testList = new ArrayList<BaseVO>();
 		
@@ -99,6 +123,10 @@ public class BaseServiceTest {
 	}
 	
 	// ExtendedVO
+	/**
+	 * Create a ExtendedBaseVO list.
+	 * @return
+	 */
 	private List<BaseVO> createTestListExtended() {
 		List<BaseVO> testList = new ArrayList<BaseVO>();
 		
@@ -121,6 +149,10 @@ public class BaseServiceTest {
 		return testList;
 	}
 	
+	/**
+	 * Create a ExtendedBaseVO list with duplicated values.
+	 * @return
+	 */
 	private List<BaseVO> createTestListWithDuplicatedValuesExtended() {
 		List<BaseVO> testList = new ArrayList<BaseVO>();
 		
